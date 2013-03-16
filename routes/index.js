@@ -6,17 +6,24 @@ var color = require('onecolor'),
     Canvas = require('canvas');
 
 exports.index = function(req, res){
-  var c = color(req.route.params[0]) || color('black'),
-    cHex = c.hex(),
-    canvas = new Canvas(100,100),
+  var colorName = req.route.params[0],
+    col = color(colorName),
+    cHex,
+    canvas = new Canvas(200,200),
     ctx = canvas.getContext('2d');
 
+  if(!col){
+    colorName = 'black';
+  }
+  cHex = color(colorName).hex();
+
   ctx.fillStyle = cHex;
+  ctx.fillRect(0,0,200,200);
   ctx.fill();
 
-  console.log(c);
   res.render('index', {
-    color: c.hex(),
-    image: canvas.toDataUrl()
+    colorName: colorName,
+    color: cHex,
+    imageUrl: canvas.toDataURL()
   });
 };

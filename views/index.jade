@@ -1,6 +1,13 @@
 doctype 5
-html
+html(prefix="og: http://ogp.me/ns#")
   head
     title= color
+    meta(property="og:title", content=colorName)
+    meta(property="og:description", content="Full screen " + colorName)
+    meta(property="og:type", content="website")
+    meta(property="og:image", content=imageUrl)
+    link(href=imageUrl, rel="icon", type="image/x-icon")
+
   body(bgcolor=color)
+    img(src=imageUrl)
 
