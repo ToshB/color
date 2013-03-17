@@ -1,12 +1,12 @@
 {
   "name": "fullscreen-color",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "canvas": "*",
+    "canvas": "0.12.x",
     "express": "3.1.0",
     "jade": "*"
   },
