@@ -1,7 +1,3 @@
-
-/*
- * GET home page.
- */
 var color = require('onecolor'),
     Canvas = require('canvas');
 
@@ -15,6 +11,7 @@ exports.index = function(req, res){
   if(!col){
     colorName = 'black';
   }
+
   cHex = color(colorName).hex();
 
   ctx.fillStyle = cHex;

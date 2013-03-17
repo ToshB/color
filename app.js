@@ -26,6 +26,11 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.get('/r', function(req, res){
+  var color = Math.floor(Math.random()*16777215).toString(16);
+  res.redirect('/'+color);
+});
+
 app.get(/\/(.*)/, routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
