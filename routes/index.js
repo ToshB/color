@@ -28,6 +28,7 @@ exports.index = function(req, res){
       colorName: colorName,
       color: cHex,
       imageUrl: dataUrl,
+      pageUrl: req.protocol + '://' + req.get('host') + req.url
     });
   });
 };
