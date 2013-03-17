@@ -6,12 +6,9 @@
     "start": "node app"
   },
   "dependencies": {
-    "canvas": "git://github.com/elspoono/node-canvas-heroku.git",
+    "canvas": "*",
     "express": "3.1.0",
     "jade": "*"
-  },
-  "devDependencies": {
-    "canvas": "~0.8.1"
   },
   "engines": {
     "node": "0.8.x",
