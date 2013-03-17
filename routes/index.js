@@ -21,9 +21,11 @@ exports.index = function(req, res){
   ctx.fillRect(0,0,200,200);
   ctx.fill();
 
-  res.render('index', {
-    colorName: colorName,
-    color: cHex,
-    imageUrl: canvas.toDataURL()
+  canvas.toDataURL('image/png', function (err, dataUrl){
+    res.render('index', {
+      colorName: colorName,
+      color: cHex,
+      imageUrl: dataUrl
+    });
   });
 };
