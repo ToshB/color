@@ -1,6 +1,6 @@
 {
   "name": "fullscreen-color",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node app"
@@ -14,7 +14,7 @@
     "canvas": "~0.8.1"
   },
   "engines": {
-    "node": "0.8.x",
+    "node": "0.7.x",
     "npm":  "1.2.x"
   }
 }
